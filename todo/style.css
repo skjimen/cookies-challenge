@@ -2,13 +2,12 @@
   h1 {
     color: black;
     text-align: center;
-    font-family: snell roundhand, cursive;
+    font-family: 'snell roundhand', 'cursive';
   }
   
   body {
-    background-color: lightsalmon;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM70k8ILsZ-ue9mTuTU-O5vvOFDlQtsRU3Q-wxcZLE77yOaMJa-7_kRuK0yCnMUOSTqZc&usqp=CAU);
-    background-repeat: repeat;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM70k8ILsZ-ue9mTuTU-O5vvOFDlQtsRU3Q-wxcZLE77yOaMJa-7_kRuK0yCnMUOSTqZc&usqp=CAU');
+    background-repeat: no-repeat;
     background-size: cover;
   }
   
