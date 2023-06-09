@@ -12,6 +12,7 @@ class App extends React.Component {
       search: ""
     };
     this.addToFavorites = this.addToFavorites.bind(this);
+    this.removeFromFavorites = this.removeFromFavorites.bind(this);
   }
 
   componentDidMount() {
@@ -28,6 +29,12 @@ class App extends React.Component {
     }));
   }
 
+  removeFromFavorites(drink) {
+    this.setState(prevState => ({
+      favorites: prevState.favorites.filter(item => item !== drink)
+    }));
+  }
+
   render() {
     const drinkArrayVar = this.state.drinkArray.map((element, index) => (
       <li key={index}>
@@ -37,12 +44,16 @@ class App extends React.Component {
     ));
 
     const favoritesArrayVar = this.state.favorites.map((element, index) => (
-      <li key={index}>{element.strDrink}</li>
+      <li key={index}>
+        {element.strDrink}
+        <button onClick={() => this.removeFromFavorites(element)}>Remove from Favorites</button>
+      </li>
     ));
 
     return (
       <div className="App">
         <h1>Cocktails</h1>
+        <h2>Drink List</h2>
         <ul>{drinkArrayVar}</ul>
         <h2>Favorites</h2>
         <ul>{favoritesArrayVar}</ul>
